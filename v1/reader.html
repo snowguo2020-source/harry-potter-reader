@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harry Potter Reader - Chapter 1</title>
+    <link rel="stylesheet" href="css/reader.css">
+</head>
+<body>
+    <!-- 顶部标题栏 -->
+    <header class="header">
+        <div class="header-content">
+            <h1>⚡ Harry Potter and the Sorcerer's Stone</h1>
+            <div class="chapter-info">
+                <p class="chapter-title">Chapter 1: The Boy Who Lived</p>
+                <div class="stats">
+                    <span>📖 <span id="paragraph-count">-</span> 段落</span>
+                    <span>📚 <span id="word-count">-</span> 词</span>
+                    <span>💬 <span id="phrase-count">-</span> 短语</span>
+                    <span>✨ <span id="sentence-count">-</span> 句</span>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- 音频控制栏 -->
+    <div class="audio-control">
+        <div class="audio-player">
+            <button id="play-btn" class="play-btn">▶</button>
+            
+            <div class="progress-container">
+                <div class="progress-bar" id="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="time-display">
+                    <span id="current-time">0:00</span>
+                    <span id="duration">0:00</span>
+                </div>
+            </div>
+            
+            <div class="speed-controls">
+                <button class="speed-btn" data-speed="0.75">0.75x</button>
+                <button class="speed-btn active" data-speed="1">1x</button>
+                <button class="speed-btn" data-speed="1.25">1.25x</button>
+                <button class="speed-btn" data-speed="1.5">1.5x</button>
+            </div>
+            
+            <button id="toggle-translation" class="toggle-btn">👁️ 隐藏翻译</button>
+        </div>
+        <audio id="audio" src="audio/chapter1.mp3"></audio>
+    </div>
+
+    <!-- 主内容区 -->
+    <div class="main-container">
+        <!-- 左侧阅读区 (75%) -->
+        <div class="reading-area">
+            <div id="content-area" class="content">
+                <!-- 段落内容将动态加载 -->
+            </div>
+        </div>
+
+        <!-- 右侧词汇详情区 (25%) -->
+        <div class="vocabulary-area">
+            <div class="vocab-tabs">
+                <button class="tab-btn active" data-tab="words">
+                    Words <span class="count" id="words-tab-count">(0)</span>
+                </button>
+                <button class="tab-btn" data-tab="phrases">
+                    Phrases <span class="count" id="phrases-tab-count">(0)</span>
+                </button>
+                <button class="tab-btn" data-tab="sentences">
+                    Sentences <span class="count" id="sentences-tab-count">(0)</span>
+                </button>
+            </div>
+
+            <div class="vocab-content">
+                <!-- Words Tab -->
+                <div id="words-tab" class="tab-content active">
+                    <div id="words-list" class="vocab-list">
+                        <!-- 动态加载生词 -->
+                    </div>
+                </div>
+
+                <!-- Phrases Tab -->
+                <div id="phrases-tab" class="tab-content">
+                    <div id="phrases-list" class="vocab-list">
+                        <!-- 动态加载短语 -->
+                    </div>
+                </div>
+
+                <!-- Sentences Tab -->
+                <div id="sentences-tab" class="tab-content">
+                    <div id="sentences-list" class="vocab-list">
+                        <!-- 动态加载句子 -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/reader.js"></script>
+</body>
+</html>

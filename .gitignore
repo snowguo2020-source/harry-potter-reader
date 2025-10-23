@@ -1,1 +1,30 @@
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Temporary files
+*.tmp
+*.bak
+*.backup
+*-backup-*
+*-old.*
+
+# Test files
+test-*.html
+test-*.js
+debug-*.js

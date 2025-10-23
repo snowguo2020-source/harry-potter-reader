@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>哈利波特英语阅读器</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "PingFang SC", "Microsoft YaHei", sans-serif;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            width: 100%;
+            background: white;
+            border-radius: 20px;
+            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            padding: 60px 40px;
+        }
+        
+        h1 {
+            text-align: center;
+            color: #2d3748;
+            font-size: 2.5em;
+            margin-bottom: 15px;
+            font-weight: 700;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #718096;
+            font-size: 1.1em;
+            margin-bottom: 50px;
+        }
+        
+        .chapter-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 20px;
+            margin-top: 40px;
+        }
+        
+        .chapter-card {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            border-radius: 15px;
+            padding: 30px 20px;
+            text-align: center;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+            text-decoration: none;
+            color: white;
+            display: block;
+        }
+        
+        .chapter-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 8px 25px rgba(0,0,0,0.2);
+        }
+        
+        .chapter-card.available {
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        }
+        
+        .chapter-card.unavailable {
+            background: #e2e8f0;
+            cursor: not-allowed;
+            color: #a0aec0;
+        }
+        
+        .chapter-card.unavailable:hover {
+            transform: none;
+        }
+        
+        .chapter-number {
+            font-size: 2em;
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+        
+        .chapter-title {
+            font-size: 0.9em;
+            opacity: 0.9;
+        }
+        
+        .status-badge {
+            display: inline-block;
+            margin-top: 10px;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.75em;
+            background: rgba(255,255,255,0.2);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>📚 哈利波特英语阅读器</h1>
+        <p class="subtitle">Harry Potter Interactive English Reader</p>
+        
+        <div class="chapter-grid">
+            <a href="chapter.html?chapter=1" class="chapter-card available">
+                <div class="chapter-number">Chapter 1</div>
+                <div class="chapter-title">The Boy Who Lived</div>
+                <span class="status-badge">✓ 可用</span>
+            </a>
+            
+            <div class="chapter-card unavailable">
+                <div class="chapter-number">Chapter 2</div>
+                <div class="chapter-title">Coming Soon</div>
+                <span class="status-badge">开发中</span>
+            </div>
+            
+            <div class="chapter-card unavailable">
+                <div class="chapter-number">Chapter 3</div>
+                <div class="chapter-title">Coming Soon</div>
+                <span class="status-badge">开发中</span>
+            </div>
+            
+            <div class="chapter-card unavailable">
+                <div class="chapter-number">Chapter 4</div>
+                <div class="chapter-title">Coming Soon</div>
+                <span class="status-badge">开发中</span>
+            </div>
+            
+            <div class="chapter-card unavailable">
+                <div class="chapter-number">Chapter 5</div>
+                <div class="chapter-title">Coming Soon</div>
+                <span class="status-badge">开发中</span>
+            </div>
+            
+            <div class="chapter-card unavailable">
+                <div class="chapter-number">Chapter 6</div>
+                <div class="chapter-title">Coming Soon</div>
+                <span class="status-badge">开发中</span>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
