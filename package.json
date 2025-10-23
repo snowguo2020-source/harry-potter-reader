@@ -1,0 +1,20 @@
+{
+  "name": "harry-potter-reader",
+  "version": "1.0.0",
+  "description": "为中国6年级学生打造的交互式《哈利波特》英语学习平台",
+  "scripts": {
+    "dev": "python3 -m http.server 8000",
+    "build": "echo 'No build step required - static site'"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/snowguo2020-source/harry-potter-reader"
+  },
+  "keywords": [
+    "harry-potter",
+    "english-learning",
+    "interactive-reader"
+  ],
+  "author": "Clare Guo",
+  "license": "MIT"
+}
